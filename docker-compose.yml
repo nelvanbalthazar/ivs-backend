@@ -1,16 +1,5 @@
 version: "1.0"
 services:
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-    ports: 
-      - '5432:5432'
-    volumes:
-      - ivs-db:/var/lib/postgresql/data
-
   ivs-backend:
     image: backend
     build:
@@ -19,6 +8,3 @@ services:
       - postgres
     ports:
       - '3001:3000'
-        
-volumes:
-  ivs-db:
