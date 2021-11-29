@@ -1,0 +1,12 @@
+{
+  "PORT": "3000",
+
+  "DB_NAME": "postgres",
+  "DB_USER": "postgres",
+  "DB_PASS": "postgres",
+  "DB_HOST": "localhost",
+  "DB_PORT": "5432",
+  "DB_DIALECT": "postgres",
+  "ACCESS_TOKEN_SECRET": "1690a8cbf1bdc7da02df1f8449e3fce10e4714db1b9d4f9c2d1daba70c77eafad2019f67a957211685fcabbcd12febcb8a7d36e4f0b61658f6e83898d186bb26"
+
+}

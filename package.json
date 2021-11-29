@@ -1,0 +1,71 @@
+{
+  "name": "ivs-backend",
+  "version": "1.0.0",
+  "description": "IVS user management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./app/server.js",
+    "start-dev": "./node_modules/.bin/nodemon ./app/server.js",
+    "eslint-fix": "./node_modules/.bin/eslint --fix .",
+    "test": "./node_modules/mocha/bin/mocha --exit --reporter spec --timeout 12000 test/index.js",
+    "migrate": "./node_modules/sequelize-cli/lib/sequelize db:migrate --migrations-path=app/db/migrations --config=app/db/sequelize-config.js",
+    "seed": "./node_modules/.bin/sequelize db:seed:all --seeders-path=app/db/seeds --config=app/db/sequelize-config.js --debug"
+  },
+  "keywords": [
+    "express"
+  ],
+  "pre-commit": [
+    "eslint-fix"
+  ],
+  "author": "Nelvan Balthazar Petrian K. R.",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "cuid": "^2.1.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "express-enrouten": "^1.3.0",
+    "express-mung": "^0.5.1",
+    "express-paginate": "^1.0.0",
+    "express-validator": "^5.3.1",
+    "express-winston": "^3.0.1",
+    "fast-json-parse": "^1.0.3",
+    "fast-safe-stringify": "^2.0.6",
+    "general-status-code": "^1.0.1",
+    "implement-js": "0.0.27",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.4",
+    "nconf": "^0.10.0",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "redis-pool-connection": "^1.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "sequelize": "^4.42.0",
+    "sequelize-auto": "^0.4.29",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.10.1",
+    "supertest": "^3.4.2"
+  }
+}
